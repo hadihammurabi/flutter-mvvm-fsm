@@ -9,6 +9,8 @@ enum ContactViewState {
 }
 
 class ContactViewModel with ChangeNotifier {
+  final ContactAPI contactAPI = ContactAPI();
+
   ContactViewState _state = ContactViewState.none;
   ContactViewState get state => _state;
 
@@ -24,7 +26,7 @@ class ContactViewModel with ChangeNotifier {
     changeState(ContactViewState.loading);
 
     try {
-      final c = await ContactAPI.getAllContacts();
+      final c = await contactAPI.getAllContacts();
       _contacts = c;
       notifyListeners();
       changeState(ContactViewState.none);
