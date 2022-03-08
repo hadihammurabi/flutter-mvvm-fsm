@@ -8,8 +8,9 @@ import 'contact_api_test.mocks.dart';
 
 // void main() {
 //   group('ContactAPI', () {
+//     ContactAPI contactAPI = ContactAPI();
 //     test('get all contacts returns data', () async {
-//       var contacts = await ContactAPI.getAllContacts();
+//       var contacts = await contactAPI.getAllContacts();
 //       expect(contacts.isNotEmpty, true);
 //     });
 //   });
